@@ -7,6 +7,7 @@ pipeline {
                 git branch: 'main',
                     url: 'https://github.com/KmWahba2000/web-demo.git'
             }
+        }
 
         stage('Build Docker Image') {
             steps {
@@ -23,6 +24,7 @@ pipeline {
                     docker compose up -d --force-recreate --build --no-cache
                 '''
             }
+        }
     }
 
     post {
