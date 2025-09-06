@@ -21,8 +21,8 @@ pipeline {
     stage('Deploy Container') {
       steps {
         sh '''
-          docker compose down || true
-          docker compose up -d --force-recreate
+          docker compose down
+          docker compose up -d --build
         '''
       }
     }
