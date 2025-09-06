@@ -13,6 +13,7 @@ pipeline {
             steps {
                 echo "Building Docker image..."
                 sh 'docker compose build --no-cache'
+                reuseNode true
             }
         }
 
