@@ -9,23 +9,15 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                echo "Building Docker image..."
-                sh 'docker compose build --no-cache'
-            }
-        }
-
         stage('Deploy Container') {
             steps {
                 echo "Deploying new container..."
                 sh '''
-                    docker compose down
+                    docker compose down --remove-orphans
                     docker compose up -d --build
                 '''
             }
         }
-
     }
 
     post {

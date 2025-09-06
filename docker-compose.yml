@@ -1,9 +1,9 @@
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: web-demo
+    image: nginx:alpine
+    container_name: static-web-demo
     ports:
       - "9090:80"
+    volumes:
+      - ./web:/usr/share/nginx/html
     restart: unless-stopped
