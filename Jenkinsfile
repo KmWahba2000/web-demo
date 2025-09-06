@@ -30,7 +30,7 @@ pipeline {
 
   post {
     success {
-      echo "✅ Deployment successful! Website updated on port 8080"
+      echo "✅ Deployment successful!"
     }
     failure {
       echo "❌ Deployment failed. Check logs."
