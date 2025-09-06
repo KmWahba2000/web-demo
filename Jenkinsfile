@@ -13,7 +13,6 @@ pipeline {
             steps {
                 echo "Building Docker image..."
                 sh 'docker compose build --no-cache'
-                reuseNode true
             }
         }
 
@@ -21,8 +20,8 @@ pipeline {
             steps {
                 echo "Deploying new container..."
                 sh '''
-                    docker compose down -v
-                    docker compose up -d --force-recreate --build
+                    docker compose down
+                    docker compose up -d --build
                 '''
             }
         }
