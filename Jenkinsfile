@@ -21,10 +21,11 @@ pipeline {
                 echo "Deploying new container..."
                 sh '''
                     docker compose down -v
-                    docker compose up -d --force-recreate --build --no-cache
+                    docker compose up -d --force-recreate --build
                 '''
             }
         }
+
     }
 
     post {
