@@ -5,5 +5,5 @@ services:
       dockerfile: Dockerfile
     container_name: web-demo
     ports:
-      - "8080:80"
+    - "9090:80"
     restart: unless-stopped
