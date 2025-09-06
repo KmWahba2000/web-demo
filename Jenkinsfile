@@ -2,27 +2,27 @@ pipeline {
   agent any
 
   environment {
-    APP_NAME = "web-demo"
+    APP_NAME = 'web-demo'
   }
 
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/KmWahba2000/web-demo.git'
+        git branch: 'main', url: 'https://github.com/<YourUser>/<YourRepo>.git'
       }
     }
 
     stage('Build Docker Image') {
       steps {
-        sh 'docker compose build'
+        sh 'docker compose build --no-cache'
       }
     }
 
-    stage('Deploy') {
+    stage('Deploy Container') {
       steps {
         sh '''
           docker compose down || true
-          docker compose up -d
+          docker compose up -d --force-recreate
         '''
       }
     }
@@ -30,10 +30,10 @@ pipeline {
 
   post {
     success {
-      echo "✅ Deployment successful! Visit http://localhost:9090"
+      echo "✅ Deployment successful! Website updated"
     }
     failure {
-      echo "❌ Build or Deploy failed!"
+      echo "❌ Deployment failed. Check logs."
     }
   }
 }
