@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/<YourUser>/<YourRepo>.git'
+        git branch: 'main', url: 'https://github.com/KmWahba2000/web-demo.git'
       }
     }
 
@@ -30,7 +30,7 @@ pipeline {
 
   post {
     success {
-      echo "✅ Deployment successful! Website updated"
+      echo "✅ Deployment successful! Website updated on port 8080"
     }
     failure {
       echo "❌ Deployment failed. Check logs."
