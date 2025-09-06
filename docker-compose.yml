@@ -1,7 +1,7 @@
 services:
   web:
     image: nginx:alpine
-    container_name: static-web-demo
+    container_name: web-demo
     ports:
       - "9090:80"
     volumes:
