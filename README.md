@@ -13,7 +13,7 @@ The entire workflow is automated with **Jenkins CI/CD**.
 
 ## How to Run:
 
-### 1. Use **ngrok** to expose Jenkins (running locally) to a public URL so GitHub webhooks can reach it.
+### 1. Use **ngrok** to expose Jenkins to a public URL so GitHub webhooks can reach it.
 
 Run:
 ```bash
