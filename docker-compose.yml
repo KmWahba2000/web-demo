@@ -7,3 +7,4 @@ services:
     volumes:
       - ./web:/usr/share/nginx/html
     restart: unless-stopped
+.
