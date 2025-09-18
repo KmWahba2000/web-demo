@@ -11,7 +11,7 @@ The entire workflow is automated with **Jenkins CI/CD**.
   3. Jenkins checks out the latest code, builds a new Docker image, and redeploys the container.
 - As a result, the website is updated automatically without any manual steps.
 
-## How to Run:
+## How to Run
 
 ### 1. Use **ngrok** to expose Jenkins to a public URL so GitHub webhooks can reach it.
 
@@ -55,7 +55,7 @@ This builds the Docker image specified in the **Dockerfile** and starts the cont
 
 ![image alt](https://github.com/KmWahba2000/web-demo/blob/6958f12f91bbf0240159f6361da3adc9db927f4e/Assets/7.png)
 
-### 6. Modify and Deploy Automatically
+### 6. Modify and Deploy
 
 * Edit the `index.html` file.
 * Push the changes to GitHub repo.
