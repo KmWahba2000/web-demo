@@ -70,4 +70,4 @@ This builds the Docker image specified in the **Dockerfile** and starts the cont
 
 ### Final Test:
 
-![Demo Animation](https://github.com/KmWahba2000/web-demo/blob/d6f089718294c9982c08346a8a9ff1f72854ea19/Assets/Final%20Test.gif)
+https://github.com/user-attachments/assets/aea04abd-4484-4322-8c7a-7e8f721d454f
