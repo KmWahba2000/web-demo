@@ -3,22 +3,13 @@ This project demonstrates a simple static web application served using **Nginx**
 The entire workflow is automated with **Jenkins CI/CD**.
 
 ## How It Works
-- The web page is served using an **Nginx Docker image** defined in the `Dockerfile`.
-- **Jenkins** is configured to integrate with the GitHub repository where the application source code is stored.
-- Whenever a change is pushed to the repository:
-  1. Jenkins automatically pulls the updated code.
-  2. A new Docker image is built.
-  3. The container is redeployed with the latest changes.
-- This ensures that the application is updated automatically without manually rebuilding and restarting the container every time.
-
-## CI/CD Workflow
-1. Developer pushes code changes to GitHub.
-2. GitHub triggers a webhook to Jenkins.
-3. Jenkins pipeline:
-   - Checks out the latest code.
-   - Builds a new Docker image.
-   - Deploys the updated container.
-4. The website is updated automatically.
+- The web page runs on an **Nginx Docker image** defined in the `Dockerfile`.
+- Jenkins is connected to the GitHub repository and uses a `Jenkinsfile` to define the pipeline.
+- The workflow is simple:
+  1. Code changes are pushed to GitHub.
+  2. A webhook notifies Jenkins.
+  3. Jenkins checks out the latest code, builds a new Docker image, and redeploys the container.
+- As a result, the website is updated automatically without any manual steps.
 
 ## How to Run:
 
