@@ -32,7 +32,7 @@ ngrok http 8080
 ````
 The output will look like this:
 
-![image alt](image_url)
+![image alt](https://github.com/KmWahba2000/web-demo/blob/29ea23c272f12762521c7ce42f08ea07dad6805d/Assets/1.png)
 
 Copy the **Forwarding URL**
 
@@ -70,8 +70,3 @@ This builds the Docker image specified in the **Dockerfile** and starts the cont
 * Refresh the browser and the page should now be updated with your modifications.
 
 ![image alt](image_url)
-
-
-
-
-
