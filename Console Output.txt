@@ -1,0 +1,87 @@
+Started by GitHub push by KmWahba2000
+Obtained Jenkinsfile from git https://github.com/KmWahba2000/web-demo.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/web-demo
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/web-demo/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/KmWahba2000/web-demo.git # timeout=10
+Fetching upstream changes from https://github.com/KmWahba2000/web-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+ > git fetch --tags --force --progress -- https://github.com/KmWahba2000/web-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 97ae26410f128c45e5001320ddc2ae290b29c3f9 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 97ae26410f128c45e5001320ddc2ae290b29c3f9 # timeout=10
+Commit message: "Modified Jenkinsfile"
+ > git rev-list --no-walk c7a073beb7e97aa3b5693303992a984519252122 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] git
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/web-demo/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/KmWahba2000/web-demo.git # timeout=10
+Fetching upstream changes from https://github.com/KmWahba2000/web-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.5'
+ > git fetch --tags --force --progress -- https://github.com/KmWahba2000/web-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 97ae26410f128c45e5001320ddc2ae290b29c3f9 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 97ae26410f128c45e5001320ddc2ae290b29c3f9 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D main # timeout=10
+ > git checkout -b main 97ae26410f128c45e5001320ddc2ae290b29c3f9 # timeout=10
+Commit message: "Modified Jenkinsfile"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy Container)
+[Pipeline] echo
+Deploying new container...
+[Pipeline] sh
++ docker compose down --remove-orphans
+ Container web-demo  Stopping
+ Container web-demo  Stopped
+ Container web-demo  Removing
+ Container web-demo  Removed
+ Network web-demo_default  Removing
+ Network web-demo_default  Removed
++ docker compose up -d --build
+ Network web-demo_default  Creating
+ Network web-demo_default  Created
+ Container web-demo  Creating
+ Container web-demo  Created
+ Container web-demo  Starting
+ Container web-demo  Started
++ echo Making sure everting is OK
+Making sure everting is OK
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+✅ Deployment successful! Website updated.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
