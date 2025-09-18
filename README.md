@@ -55,7 +55,7 @@ docker compose up -d --build
 
 This builds the Docker image specified in the **Dockerfile** and starts the container as defined in **docker-compose.yml**.
 
-### 5. Once the container is up, you can access the demo page at `http://localhost:9090`
+### 5. Once the container is up, you can access the page at `http://localhost:9090`
 
 ![image alt](https://github.com/KmWahba2000/web-demo/blob/6958f12f91bbf0240159f6361da3adc9db927f4e/Assets/7.png)
 
