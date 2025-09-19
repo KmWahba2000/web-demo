@@ -30,12 +30,16 @@ The output will look like this:
 
 Copy the **Forwarding URL**.
 
+---
+
 ### 2. Add Webhook in GitHub
 
 Go to repo settings → **Webhooks**.
 Add the copied **ngrok Forwarding URL** to the **Payload URL** and add **/github-webhook/** at the end.
 
 ![image alt](https://github.com/KmWahba2000/web-demo/blob/6958f12f91bbf0240159f6361da3adc9db927f4e/Assets/2.png)
+
+---
 
 ### 3. Configure Jenkins to Connect with GitHub
 
@@ -47,6 +51,8 @@ Add the copied **ngrok Forwarding URL** to the **Payload URL** and add **/github
 
 ![image alt](https://github.com/KmWahba2000/web-demo/blob/6958f12f91bbf0240159f6361da3adc9db927f4e/Assets/6.png)
 
+---
+
 ### 4. Run the following command for the first time building the image:
 
 ```bash
@@ -55,9 +61,15 @@ docker compose up -d --build
 
 This builds the Docker image specified in the **Dockerfile** and starts the container as defined in **docker-compose.yml**.
 
+---
+
 ### 5. Once the container is up, you can access the page at `http://localhost:9090`
 
+---
+
 ![image alt](https://github.com/KmWahba2000/web-demo/blob/6958f12f91bbf0240159f6361da3adc9db927f4e/Assets/7.png)
+
+---
 
 ### 6. Modify and Deploy
 
