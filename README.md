@@ -87,3 +87,11 @@ This builds the Docker image specified in the **Dockerfile** and starts the cont
 ### Final Test:
 
 https://github.com/user-attachments/assets/c589c899-97f3-4dd6-a661-4859f2be5bf0
+
+---
+
+## Conclusion
+
+This project demonstrates how containerization and CI/CD automation can work seamlessly together. By combining **Docker**, **Nginx**, **Jenkins**, and **GitHub Webhooks**, the deployment process is fully hands-off, a simple `git push` is all it takes to get changes live.
+
+---
